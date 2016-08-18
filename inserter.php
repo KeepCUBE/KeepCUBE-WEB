@@ -47,8 +47,8 @@
             }
             break;
             case "rr":
-            mysql_query("DELETE FROM switches WHERE room_id = '$id'");
-            mysql_query("DELETE FROM rooms WHERE room_id = '$id'");
+                mysql_query("DELETE FROM switches WHERE room_id = '$id'");
+                mysql_query("DELETE FROM rooms WHERE room_id = '$id'");
             break;
             case "sa":
                 $oncode = rand(100000,199000);
@@ -59,7 +59,7 @@
                 mysql_query("INSERT INTO switches (nazev, room_id, on_code, off_code, type) VALUES ('$name','$rid','$oncode','$offcode','$typ')");
                 break;
             case "sr":
-                mysql_query("DELETE FROM switches WHERE id = '$id'");
+                mysql_query("DELETE FROM switches WHERE switch_id = '$id'");
                 break;
             default:
                 die("<h2>Došlo k neošetřenému vstupu.</h2>");
