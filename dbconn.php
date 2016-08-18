@@ -1,7 +1,7 @@
 <?php
     $servername = "localhost";
     $username = "root";
-    $password = "kosticka";
+    $password = "root";
     $dbname = "kc";
     $link = @mysql_connect($servername,$username,$password) or die('Nelze se pripojit k databazi.');
     @mysql_select_db($dbname, $link) or die('Databaze neexistuje');

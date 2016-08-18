@@ -24,7 +24,7 @@
 </head>
 <body data-spy="scroll" data-target="#navbar" data-offset="0">
     <?php
-        include("dbconn.php");
+//        include("dbconn.php");
         $bfr = mysql_query("SELECT temp, hum, press FROM sensor_readings ORDER BY cts DESC LIMIT 1");
         $bfr2 = mysql_fetch_array($bfr);
         $hum = $bfr2[1];
@@ -119,10 +119,10 @@
                                         echo($radek[2]);
                                         echo('</td><td>');
                                         echo($radek[5]);
-                                        echo('</td><td><a href=sender.php?action=on&code=');
-                                        echo($radek[0]);
-                                        echo('><button class="btn btn-sm btn-success">ON</button></a></td><td><a href=sender.php?action=off&code=');
-                                        echo($radek[0]);
+                                        echo('</td><td><a href=sender.php?code=');
+                                        echo($radek[3]);
+                                        echo('><button class="btn btn-sm btn-success">ON</button></a></td><td><a href=sender.php?code=');
+                                        echo($radek[4]);
                                         echo('><button class="btn btn-sm btn-danger">OFF</button></a></td>');
                                         if($radek[5]=="LED")
                                         {

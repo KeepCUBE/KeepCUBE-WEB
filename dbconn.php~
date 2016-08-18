@@ -1,0 +1,9 @@
+<?php
+    $servername = "localhost";
+    $username = "root";
+    $password = "kosticka";
+    $dbname = "kc";
+    $link = @mysqli_connect($servername,$username,$password) or die('Nelze se pripojit k databazi.');
+    @mysqli_select_db($dbname, $link) or die('Databaze neexistuje');
+    mysqli_query ('set names utf8'); 
+?>
