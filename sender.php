@@ -24,7 +24,7 @@
             $msg = trim(fgets($fp, 128));
             if($msg == "SRVCONF")
             {
-                fwrite($fp, "CLNCONF#DTS{$code}{$action}E");
+                fwrite($fp, "CLNCONF#DTS{$code}A{$action}E");
                 break;
             }
         }
